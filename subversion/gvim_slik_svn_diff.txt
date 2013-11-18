@@ -1,0 +1,26 @@
+on windows use gvim to see slik svn diff
+----------------------------------------
+
+
+edit **%appdata%\Subversion\config**, add::
+
+    diff-cmd = c:\bin\svndiff.bat
+
+this is **c:\bin\svndiff.bat**::
+
+    @ECHO OFF
+
+    REM Configure your favorite diff program here.
+    SET DIFF=C:\PROGRA~1\Vim\vim74\gvim.exe -d
+
+    REM Subversion provides the paths we need as the sixth and seventh 
+    REM parameters.
+    SET LEFT=%6
+    SET RIGHT=%7
+
+    REM Call the diff command (change the following line to make sense for
+    REM your merge program).
+    %DIFF% %LEFT% %RIGHT%
+
+    REM Return an errorcode of 0 if no differences were detected, 1 if some were.
+    REM Any other errorcode will be treated as fatal.

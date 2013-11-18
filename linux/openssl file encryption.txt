@@ -1,0 +1,10 @@
+simple file encryption with openssl
+===================================
+
+encrypt a file::
+
+    openssl aes-256-cbc -a -salt -in secrets.txt -out secrets.txt.enc
+
+decrypt a file::
+
+    openssl aes-256-cbc -d -a -in secrets.txt.enc -out secrets.txt.new

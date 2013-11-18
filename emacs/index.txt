@@ -1,0 +1,7 @@
+Emacs
+=====
+
+.. toctree::
+   :maxdepth: 1
+
+   installation.txt

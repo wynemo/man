@@ -1,0 +1,11 @@
+add user on debian/ubuntu
+=========================
+
+in bash, run::
+
+    sudo useradd -m -U -s /bin/bash zdb
+    
+    -m create home
+    -M no create home
+    -s login shell for the new user
+    -U create a group with the same name as the user

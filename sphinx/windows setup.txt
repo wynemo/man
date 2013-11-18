@@ -1,0 +1,11 @@
+set environment for Windows
+===========================
+
+so you can use make.bat::
+
+    @echo off
+    set path=C:\Python27\Scripts;%path%
+    cmd 
+    
+    
+save code above as set_sphinx.bat

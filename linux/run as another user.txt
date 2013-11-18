@@ -1,0 +1,6 @@
+run as another user
+===================
+
+if you are root , run this::
+
+    sudo -u username command

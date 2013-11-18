@@ -1,0 +1,34 @@
+Installation of Emacs
+=====================
+
+windows instruction
+-------------------
+
+download this http://ftp.gnu.org/gnu/emacs/windows/emacs-24.3-bin-i386.zip
+
+unzip it to somewhere, I use **C:\\emacs-24.3**
+
+the default config folder is **%appdata%**, *.emacs.d* is here
+
+run addpm.exe in bin folder  to add shortcut to startmenu
+
+add *c:\\emacs-24.3\\bin* to path
+
+add file assocation::
+
+    set emacsbin=C:\emacs-24.3\bin\emacsclientw
+    ftype txtfile=%emacsbin% -na runemacs "%1"
+    ftype EmacsLisp=%emacsbin% -na runemacs "%1"
+    ftype CodeFile=%emacsbin% -na runemacs "%1"
+    ftype Clojurescipt=%emacsbin% -na runemacs "%1"
+    ftype wisp=%emacsbin% -na runemacs "%1"
+    assoc .txt=txtfile
+    assoc .text=txtfile
+    assoc .log=txtfile
+    assoc .el=EmacsLisp
+    assoc .c=CodeFile
+    assoc .h=CodeFile
+    assoc .=txtfile
+    assoc .wisp=wisp
+    assoc .cljs=Clojurescipt
+

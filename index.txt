@@ -1,0 +1,28 @@
+.. zdb-doc documentation master file, created by
+   sphinx-quickstart on Wed Sep 04 22:40:48 2013.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to zdb-doc's documentation!
+===================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 1
+
+   linux/index.txt
+   sphinx/index.txt
+   python_develop/index.txt
+   windows/index.txt
+   emacs/index.txt
+   subversion/index.txt
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+

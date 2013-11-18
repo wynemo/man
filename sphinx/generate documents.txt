@@ -1,0 +1,34 @@
+use sphinx and rst to generate documents
+========================================
+
+only generate documents from rst files, not python files
+
+first install sphinx::
+    
+    $ pip install sphinx
+    
+use this python script to create a sphinx project::
+
+    from sphinx import quickstart as qs
+
+    d = dict(
+        path = '.',
+        sep  = True,
+        dot  = '_',
+        project = 'project_name',
+        author = 'author_name',
+        version = '',
+        release = '',
+        suffix = '.rst',
+        master = 'index',
+        epub = True,
+        ext_autodoc = False,
+        ext_viewcode = False,
+        makefile = True,
+        batchfile = True,
+        mastertocmaxdepth = 1,
+    )
+
+    qs.generate(d, silent=True, overwrite=False)
+
+    

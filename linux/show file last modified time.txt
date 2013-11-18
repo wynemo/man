@@ -1,0 +1,6 @@
+show file last modified time
+============================
+
+cmd is ::
+
+    stat -c %y file_name

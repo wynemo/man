@@ -1,0 +1,11 @@
+tar use
+=======
+
+.tar.gz
+-------
+
+extract::
+    tar zxvf FileName.tar.gz
+
+compress::
+    tar zcvf FileName.tar.gz DirName
