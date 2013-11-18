@@ -1,0 +1,10 @@
+install soncs with pip
+======================
+
+on windows::
+
+    pip install --egg SCons
+
+on Linux, after installing virtualenv, set a virtual python environment::
+
+    $ ~/your-virtualenv-folder/bin/pip install --egg SCons

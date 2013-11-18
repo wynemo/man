@@ -17,6 +17,7 @@ Contents:
    windows/index.txt
    emacs/index.txt
    subversion/index.txt
+   scons/index.txt
 
 
 Indices and tables

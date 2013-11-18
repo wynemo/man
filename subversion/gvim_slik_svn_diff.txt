@@ -6,7 +6,7 @@ edit **%appdata%\Subversion\config**, add::
 
     diff-cmd = c:\bin\svndiff.bat
 
-this is **c:\bin\svndiff.bat**::
+this is **c:\\bin\\svndiff.bat**::
 
     @ECHO OFF
 

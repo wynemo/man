@@ -1,0 +1,7 @@
+scons
+=====
+
+.. toctree::
+   :maxdepth: 1
+
+   install scons with pip.txt
