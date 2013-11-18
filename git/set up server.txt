@@ -1,0 +1,9 @@
+set up git server on debian
+===========================
+
+add git user::
+
+    $ sudo useradd -m -U -s `which git-shell` git
+    $ sudo -u git mkdir /home/git/.ssh
+
+add your public key to /home/git/.ssh/authorized_keys

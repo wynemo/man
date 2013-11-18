@@ -1,0 +1,13 @@
+set an empty repository on server
+=================================
+
+save the folloing as init_git_repo.sh::
+
+    cd /home/git/
+    sudo -u git mkdir $1.git
+    cd /home/git/$1.git/
+    sudo -u git git --bare init
+    
+then run::
+
+    sh init_git_repo.sh repo_name

@@ -1,0 +1,8 @@
+git
+===
+
+.. toctree::
+   :maxdepth: 1
+
+   set up server.txt
+   set an empty repository on server.txt
