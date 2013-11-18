@@ -18,6 +18,7 @@ Contents:
    emacs/index.txt
    subversion/index.txt
    scons/index.txt
+   git/index.txt
 
 
 Indices and tables
