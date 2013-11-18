@@ -3,4 +3,4 @@ svn
 
 .. toctree::
 
-   gimv_slik_svn_diff.txt
+   gvim_slik_svn_diff.txt
