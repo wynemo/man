@@ -1,0 +1,27 @@
+pull push from multiple remote locations
+========================================
+
+add a **self** remote::
+
+    $ cd your_repo
+    $ git remote add self git@dabin.info:/home/git/wynemo-man.git
+
+edit your git config::
+
+    $ vi .git/config
+
+add a **all** remote::
+
+    [remote "origin"]
+        url = https://github.com/wynemo/man.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+    [remote "self"]
+        url = git@dabin.info:/home/git/wynemo-man.git
+        fetch = +refs/heads/*:refs/remotes/self/*
+    [remote "all"]
+        url = git@dabin.info:/home/git/wynemo-man.git
+        url = https://github.com/wynemo/man.git
+        
+then use this to push changes to all repo::
+
+    git push all master

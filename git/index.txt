@@ -6,3 +6,4 @@ git
 
    set up server.txt
    set an empty repository on server.txt
+   pull push from multiple remote locations.txt
