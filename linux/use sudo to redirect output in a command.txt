@@ -1,0 +1,6 @@
+use sudo to redirect output in a command
+========================================
+
+just use a shell::
+
+    sudo sh -c 'ls -hal /root/ > /root/test.out'

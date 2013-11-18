@@ -11,3 +11,4 @@ Linux use and programming
    openssl file encryption.txt
    openssl cert.txt
    run as another user.txt
+   use sudo to redirect output in a command.txt
