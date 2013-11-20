@@ -1,0 +1,6 @@
+halt
+====
+
+save this as halt.bat in **%SystemRoot%** folder::
+
+    shutdown /s /t 0
