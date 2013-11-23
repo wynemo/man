@@ -1,0 +1,20 @@
+lftp
+====
+
+configure ~/.ssh/config::
+
+    Host foo.bar
+        IdentityFile ~/.ssh/your_private_key
+
+use lftp(sftp) download folder::
+
+    lftp -c "open sftp://user@foo.bar;mirror -c -L -P 5 --use-pget-n=5 --loop '~/btd/remote_folder' /tmp/"
+    
+download file::    
+    
+    lftp -c "open sftp://user@foo.bar;pget -c -n 5 '~/btd/remote_file_name' /tmp/local_name"
+    
+if downloaded file's name has invalid character, then edit /etc/lftp.conf::
+
+    set file:charset "GBK"             # this may not be set, local encoding, windows Chinese coding gbk will be OK
+    set sftp:charset "UTF-8"           # utf-8 will be OK in transfer 

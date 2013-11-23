@@ -14,3 +14,4 @@ Linux use and programming
    use sudo to redirect output in a command.txt
    bittorrent/transmission/index.txt
    rsync/index.txt
+   lftp.txt
