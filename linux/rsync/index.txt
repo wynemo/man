@@ -1,0 +1,8 @@
+rsync
+=====
+
+.. toctree::
+   :maxdepth: 1
+
+   rsync_ssh_alias.txt
+   use rsync to sync files.txt

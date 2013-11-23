@@ -13,3 +13,4 @@ Linux use and programming
    run as another user.txt
    use sudo to redirect output in a command.txt
    bittorrent/transmission/index.txt
+   rsync/index.txt

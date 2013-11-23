@@ -1,0 +1,6 @@
+rsync and ssh alias
+===================
+
+if u have a ssh alias called linode, then sync files like this::
+
+    $ rsync -avzP ./client.py  linode:/tmp/

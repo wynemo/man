@@ -1,0 +1,16 @@
+use rsync to sync files(folder)
+===============================
+
+save this as **~/downmovie**::
+
+    #!/bin/bash
+    rsync --iconv=GBK,UTF-8 -s -LrtvzP -e ssh "user@foor.bar:/var/lib/transmission-daemon/downloads/$1" /cygdrive/d/movie/
+
+    # local windows gbk
+    # remote linux utf-8
+    # -L the contents in soft link
+    # -s protected args
+
+    # $ chmod u+x /cygdrive/c/Users/zdb/Dropbox/Public/linux/bittorrent/transmission/downmovie
+    # $ ln -s /cygdrive/c/Users/zdb/Dropbox/Public/linux/bittorrent/transmission/downmovie ~/downmovie
+    # $ ~/downmovie "remote_folder"
