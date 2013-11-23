@@ -1,0 +1,10 @@
+transmission-cli
+================
+
+install transmission-cli::
+
+    $ sudo aptitude install transmission-cli
+    
+download::
+
+    $ transmission-cli -u 40 -w ~/btd/ -er magnet_link/torrent_url

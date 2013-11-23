@@ -1,0 +1,52 @@
+transmission-daemon
+===================
+
+install and configure transmission-daemon::
+
+    $ sudo aptitude install transmission-daemon
+
+    $ sudo /etc/init.d/transmission-daemon stop
+
+    $ sudo vim /etc/transmission-daemon/settings.json
+
+
+    rpc-bind-address "127.0.0.1"
+    upload-limit 40
+    rpc-port 9092
+    encryption 1
+    rpc-username
+    rpc-password
+
+    $ sudo /etc/init.d/transmission-daemon start
+
+
+nginx config::
+
+    $ sudo vim /etc/nginx/conf.d/bt.conf
+
+    server {
+        include conf.d/ssl;
+        server_name  foo.bar;
+        
+        location / {
+            include conf.d/reverse;
+
+            proxy_pass http://localhost:9092;
+        }
+        include conf.d/misc;
+    }
+    
+    $ sudo vim /etc/nginx/conf.d/reverse
+    
+    #proxy_pass_header Server;
+    proxy_redirect off;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Scheme $scheme;
+    proxy_set_header Host $host:$server_port;
+    proxy_set_header X-Forwarded-Port $server_port;
+    
+    $ sudo vim /etc/nginx/conf.d/ssl
+    
+    listen 443 ssl;
+    ssl_certificate /etc/ssl/cacert.pem;
+    ssl_certificate_key /etc/ssl/privkey.pem;

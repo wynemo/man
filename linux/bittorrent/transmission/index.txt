@@ -1,0 +1,8 @@
+transmission
+============
+
+.. toctree::
+   :maxdepth: 1
+
+   transmission-cli.txt
+   transmission daemon and web.txt
