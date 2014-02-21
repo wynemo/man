@@ -1,0 +1,61 @@
+===================
+python remote debug
+===================
+
+**************************
+一种新的python局部调试手法
+**************************
+
+`http://shell909090.com/blog/2013/07/%E4%B8%80%E7%A7%8D%E6%96%B0%E7%9A%84python%E5%B1%80%E9%83%A8%E8%B0%83%E8%AF%95%E6%89%8B%E6%B3%95/ <http://shell909090.com/blog/2013/07/%E4%B8%80%E7%A7%8D%E6%96%B0%E7%9A%84python%E5%B1%80%E9%83%A8%E8%B0%83%E8%AF%95%E6%89%8B%E6%B3%95/>`_
+
+
+我们都知道，python里面可以用pdb来调试代码。但是pdb往往不大好用。有时候调试代码往往在多重条件里面，直接用pdb需要下条件断点，设定复杂的条件。
+
+一个简单的办法就是这么干。
+
+::
+
+    __import__('pdb').set_trace()
+
+但是有的时候，连这个出现的条件都不满足。例如，代码必须在一个受限环境中运行，很难拿到console，或者其他林林总总的毛病。这时候，我们还有一招秘技。
+
+::
+
+    import pdb, socket
+    s = socket.socket()
+    s.connect(('127.0.0.1', 8888))
+    f = s.makefile()
+    pdb.Pdb(stdin=f, stdout=f).set_trace()
+
+在连接到的目标端口上，提前用nc做好监听，就可以在触发断点的时候直接连接上来调试。
+
+
+***************
+rpdb
+***************
+install rpdb::
+
+    $ pip install rpdb
+
+This is essentially a wrapper around pdb that will re-route stdin and stdout to
+a socket handler. By default it opens the debugger on port 4444::
+
+    import rpdb; rpdb.set_trace()
+
+connect to the console::
+
+    $ nc localhost 4444
+
+***************
+rpd2
+***************
+
+download `winpdb <http://winpdb.googlecode.com/files/winpdb-1.4.8.zip>`_
+
+in foo.py::
+
+    import rpdb2; rpdb2.start_embedded_debugger('password')
+
+connect::
+
+    $ python rpdb2.py -a -o localhost -p password foo.py
