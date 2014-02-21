@@ -1,4 +1,4 @@
-lftp
+﻿lftp
 ====
 
 configure ~/.ssh/config::
@@ -12,9 +12,16 @@ use lftp(sftp) download folder::
     
 download file::    
     
-    lftp -c "open sftp://user@foo.bar;pget -c -n 5 '~/btd/remote_file_name' /tmp/local_name"
+    lftp -c "open sftp://user@foo.bar;pget -c -n 5 '~/btd/remote_file_name' -o /tmp/local_name"
     
 if downloaded file's name has invalid character, then edit /etc/lftp.conf::
 
     set file:charset "GBK"             # this may not be set, local encoding, windows Chinese coding gbk will be OK
     set sftp:charset "UTF-8"           # utf-8 will be OK in transfer 
+    
+example::
+
+    lftp -c "set sftp:charset \"UTF-8\";open sftp://user@foo.bar;pget -c -n 5 '~/btd/中文' -o /tmp/中文"
+    lftp -c "set sftp:charset \"UTF-8\";open sftp://user@foo.bar;pget -c -n 5 '~/btd/e™' -o /tmp/e™"
+    lftp -c "open ftp://192.168.6.19;mirror -c -L -P 5 --use-pget-n=5 --loop 'E:/movie/Wreck-It.Ralph.2012.DVDRip.XviD-RiPS' /cygdrive/d/movie/"
+    

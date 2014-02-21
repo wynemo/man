@@ -4,3 +4,4 @@ Python Programming
 .. toctree::
 
    install pip on windows.txt
+   python remote debug.txt
