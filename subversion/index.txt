@@ -4,3 +4,4 @@ svn
 .. toctree::
 
    gvim_slik_svn_diff.txt
+   roll back.txt
