@@ -1,0 +1,6 @@
+Disables the hibernate feature
+==============================
+
+this is it::
+
+    powercfg -h off
