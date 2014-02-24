@@ -1,0 +1,36 @@
+High-productivity software for complex networks
+===============================================
+
+NetworkX is a Python language software package for the creation, 
+
+manipulation, and study of the structure, dynamics, and functions of complex networks.
+
+install::
+
+    $ pip install networkx
+
+code example::
+
+    import networkx as nx
+
+    G=nx.Graph()
+
+    G.add_edge('a','b',weight=2)
+    G.add_edge('b','d',weight=3)
+    G.add_edge('d','f',weight=1)
+    G.add_edge('a','c',weight=1)
+    G.add_edge('c','e',weight=1)
+    G.add_edge('e','f',weight=1)
+
+    print nx.dijkstra_path(G, source='a', target='d')
+
+    # ['a', 'c', 'e', 'f', 'd']
+
+    '''
+        b 3  d
+      2        1
+    a           f
+      1       1
+        c 1  e
+
+    '''
