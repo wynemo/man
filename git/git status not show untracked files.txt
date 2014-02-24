@@ -1,0 +1,6 @@
+git status not show untracked files
+===================================
+
+this is it::
+
+    git status -uno .
