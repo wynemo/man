@@ -6,3 +6,4 @@ Windows
 
    Install Telnet Client by using a command line.txt
    halt.txt
+   disable hibernate.txt
