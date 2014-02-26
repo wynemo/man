@@ -28,7 +28,7 @@ create a new clojurescript project
 ::
 
     $ lein new cljs-helloworld
-    $ cd hello-cljs/
+    $ cd cljs-helloworld
     
 edit `project.clj`::
 
