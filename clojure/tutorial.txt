@@ -40,7 +40,7 @@ edit `project.clj`::
         {:builds
          [{:source-paths ["src"],
            :compiler
-           {:pretty-print true, :target :nodejs, :optimizations :advanced}}]}
+           {:pretty-print true, :target :nodejs, :optimizations :advanced}}]})
 
 this will install lein-cljsbuild, clojurescript::
 
