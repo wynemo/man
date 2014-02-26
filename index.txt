@@ -19,6 +19,7 @@ Contents:
    subversion/index.txt
    scons/index.txt
    git/index.txt
+   clojure/index.txt
 
 
 Indices and tables
