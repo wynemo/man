@@ -1,0 +1,69 @@
+clojure tutorial
+================
+
+install openjdk
+---------------
+
+on linux::
+
+    $ sudo aptitude install openjdk-6-jdk
+
+on windows, your need install oracle's jdk
+
+install lein
+------------
+
+::
+
+    $ export HTTP_CLIENT="wget --no-check-certificate -O"
+    $ mkdir -p ~/bin
+    $ wget --no-check-certificate https://raw.github.com /technomancy/leiningen/stable/bin/lein
+    $ cp lein ~/bin/
+    $ chmod 755 ~/bin/lein
+    $ lein version
+
+create a new clojurescript project
+----------------------------------
+
+::
+
+    $ lein new cljs-helloworld
+    $ cd hello-cljs/
+    
+edit `project.clj`::
+
+    (defproject cljs-helloworld "1.0.0-SNAPSHOT"
+      :description "FIXME: write description"
+      :plugins [[lein-cljsbuild "1.0.1"]]
+      :dependencies [[org.clojure/clojurescript "0.0-2138"] [org.clojure/clojure "1.5.1"]]
+      :cljsbuild
+        {:builds
+         [{:source-paths ["src"],
+           :compiler
+           {:pretty-print true, :target :nodejs, :optimizations :advanced}}]}
+
+this will install lein-cljsbuild, clojurescript::
+
+    $ lein deps
+
+rename core.clj::
+
+    $ mv src/hello_cljs/core.clj src/hello_cljs/core.cljs
+    $ vi src/hello_cljs/core.cljs
+
+edit core.cljs::
+
+    (ns hello-cljs.core)
+
+    (defn -main [& args]
+      (println (apply str (map [\space "world" "hello"] [2 0 1]))))
+
+    (set! *main-cli-fn* -main)
+
+build::
+
+    lein cljsbuild once
+
+run::
+
+    node target/cljsbuild-main.js
