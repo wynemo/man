@@ -4,3 +4,4 @@ clojure
 .. toctree::
 
    tutorial.txt
+   clojurescript development on windows.txt

@@ -1,0 +1,38 @@
+clojurescript development on windows
+====================================
+
+install lighttable
+------------------
+
+download `lighttable <http://www.lighttable.com/>`_
+
+extract the zip on **C\:**
+
+configure lighttable
+--------------------
+
+change font to consolas and add line number
+
+view - commands - Settings: Default behaviors
+
+in `:editor` section::
+
+    (:lt.objs.style/font-settings consolas 11 1)
+    :lt.objs.editor/line-numbers
+
+
+install npm
+-----------
+
+download latest `npm.zip <http://nodejs.org/dist/>`_ on `http://nodejs.org/dist/ <http://nodejs.org/dist/>`_
+
+extract npm,zip to **c:/LightTable/plugins/node/**
+
+now you can use `npm` in command line
+
+
+
+
+
+
+
