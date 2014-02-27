@@ -13,7 +13,7 @@ on windows, your need install oracle's jdk
 install lein
 ------------
 
-::
+on linux or cygwin::
 
     $ export HTTP_CLIENT="wget --no-check-certificate -O"
     $ mkdir -p ~/bin
@@ -21,6 +21,18 @@ install lein
     $ cp lein ~/bin/
     $ chmod 755 ~/bin/lein
     $ lein version
+    
+on windows, download lein.bat, place it to **C\:**::
+
+    $ wget https://raw.github.com/technomancy/leiningen/stable/bin/lein.bat
+    $ lein self-install
+
+install node.js
+---------------
+
+on windows, place node.exe to C\:\\cygwin\\home\\zdb\\bin ::
+
+    $ wget http://nodejs.org/dist/v0.10.26/node.exe
 
 create a new clojurescript project
 ----------------------------------
@@ -67,3 +79,13 @@ build::
 run::
 
     node target/cljsbuild-main.js
+    
+on windows run repl::
+
+    set NODE_PATH=C:\LightTable\plugins\node\node_modules
+    set path=c:;C:\cygwin\home\zdb\bin;%path%
+    set JAVA_HOME=C:\Program Files (x86)\Java\jdk1.7.0_51
+    set path=%JAVA_HOME%\bin;%JAVA_HOME%\lib;%JAVA_HOME%\jre\lib;%path%
+    set CLASSPATH = ;.%JAVA_HOME%\lib;%JAVA_HOME%\jre\lib
+
+    lein repl    
