@@ -5,3 +5,4 @@ clojure
 
    tutorial.txt
    clojurescript development on windows.txt
+   use nodejs.txt
