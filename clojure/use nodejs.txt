@@ -43,7 +43,7 @@ edit project.clj
            :compiler
            {:pretty-print true, :target :nodejs, :optimizations :simple}}]})
 
-compile an run
+compile and run
 --------------
 
 ::

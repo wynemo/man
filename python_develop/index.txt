@@ -6,3 +6,4 @@ Python Programming
    install pip on windows.txt
    python remote debug.txt
    networkx.txt
+   logging module.txt

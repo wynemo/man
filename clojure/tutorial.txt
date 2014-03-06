@@ -22,7 +22,9 @@ on linux or cygwin::
     $ chmod 755 ~/bin/lein
     $ lein version
     
-on windows, download lein.bat, place it to **C\:**::
+on windows, download lein.bat, place it to **C\:**
+
+::
 
     $ wget https://raw.github.com/technomancy/leiningen/stable/bin/lein.bat
     $ lein self-install
