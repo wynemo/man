@@ -8,3 +8,4 @@ git
    set an empty repository on server.txt
    pull push from multiple remote locations.txt
    git status not show untracked files.txt
+   change remote url.txt

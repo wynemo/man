@@ -1,0 +1,6 @@
+change remote url
+=================
+
+::
+
+    git remote set-url origin git@github.com:wynemo/nemo_vim.git
