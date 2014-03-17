@@ -20,6 +20,7 @@ Contents:
    scons/index.txt
    git/index.txt
    clojure/index.txt
+   cygwin/index.txt
 
 
 Indices and tables

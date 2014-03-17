@@ -1,0 +1,46 @@
+sshd and cygwin
+===============
+
+`http://tsengf.blogspot.com/2011/06/installing-sshd-in-cygwin-on-windows-7.html <http://tsengf.blogspot.com/2011/06/installing-sshd-in-cygwin-on-windows-7.html>`_
+
+`http://superuser.com/questions/110726/how-to-uninstall-reinstall-cygwin-to-use-the-sshd <http://superuser.com/questions/110726/how-to-uninstall-reinstall-cygwin-to-use-the-sshd>`_
+
+
+
+install sshd service
+--------------------
+
+::
+
+    $ ssh-host-config
+    
+    Should privilege separation be used? (yes/no) yes
+    
+    *** Info: Administrator privileges.  Should this script attempt to create a
+    *** Query: new local account 'sshd'? (yes/no) yes
+    
+    (Say "no" if it is already installed as a service) (yes/no) yes
+    
+    Do you want to use a different name? (yes/no) no
+    
+    Create new privileged user account 'cyg_server'? (yes/no) yes
+    
+    *** Query: Please enter the password for user 'cyg_server':123
+    *** Query: Reenter: 
+
+start and test
+--------------
+
+::
+
+    net start sshd
+    ssh localhost
+
+uninstall sshd service
+----------------------
+
+::
+
+    delete LOCAL_MACHINE\SYSTEM\ControlSet001\services\sshd
+    run 'sc delete sshd'
+    reboot
