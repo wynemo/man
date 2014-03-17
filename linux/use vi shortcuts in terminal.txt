@@ -1,0 +1,9 @@
+use vi shortcuts in terminal
+============================
+
+`http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal <http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal>`_
+
+To enable Vi-mode, edit (or create) the file ~/.inputrc or /etc/inputrc and add the following lines::
+    
+    set editing-mode vi
+    set keymap vi-command

@@ -16,3 +16,5 @@ Linux use and programming
    rsync/index.txt
    lftp.txt
    ubuntu/index.txt
+   use vi shortcuts in terminal.txt
+   
