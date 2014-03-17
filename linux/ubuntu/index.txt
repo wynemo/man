@@ -1,0 +1,7 @@
+ubuntu
+=======
+
+.. toctree::
+   :maxdepth: 1
+   
+   ubuntu change grub boot order.txt

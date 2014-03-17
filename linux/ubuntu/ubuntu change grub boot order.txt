@@ -1,0 +1,5 @@
+sudo vi /etc/default/grub
+
+Change the number in GRUB_DEFAULT line. First boot menu is numbered 0. If it is 6th boot menu, type in GRUB_DEFAULT=5.
+
+sudo update-grub
