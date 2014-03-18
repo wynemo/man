@@ -1,6 +1,11 @@
 use sphinx and rst to generate documents
 ========================================
 
+`http://raxcloud.blogspot.com/2013/02/documenting-python-code-using-sphinx.html <http://raxcloud.blogspot.com/2013/02/documenting-python-code-using-sphinx.html>`_
+`
+http://sphinx-doc.org/markup/desc.html#info-field-lists < http://sphinx-doc.org/markup/desc.html#info-field-lists>`_
+
+
 only generate documents from rst files, not python files
 
 first install sphinx::

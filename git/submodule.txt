@@ -1,0 +1,10 @@
+submodule
+=========
+
+add submodule
+-------------
+
+::
+
+    git submodule add https://github.com/sjl/gundo.vim.git bundle/gundo
+    git add bundle/gundo .gitmodules
