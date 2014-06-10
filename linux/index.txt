@@ -7,6 +7,7 @@ Linux use and programming
    show file last modified time.txt
    add sudo user.txt
    add user.txt
+   remove user.txt
    tar.txt
    openssl file encryption.txt
    openssl cert.txt

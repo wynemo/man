@@ -1,0 +1,8 @@
+remove user on debian/ubuntu
+============================
+
+in bash, run::
+
+    userdel -r user_name
+
+    -r remove home directory
