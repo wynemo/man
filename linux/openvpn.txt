@@ -45,3 +45,7 @@ openvpn
   echo 1 > /proc/sys/net/ipv4/ip_forward
   vim /etc/sysctl.conf
   net.ipv4.ip_forward=1
+  
+  https://wiki.debian.org/OpenVPN#Debian_Server_with_Android_.2F_iOS_devices
+  https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-14-04
+  https://play.google.com/store/apps/details?id=net.openvpn.openvpn
