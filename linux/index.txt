@@ -19,4 +19,5 @@ Linux use and programming
    ubuntu/index.txt
    use vi shortcuts in terminal.txt
    openvpn.txt
+   poor man rsync.rst
    
