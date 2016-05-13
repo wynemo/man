@@ -20,4 +20,4 @@ Linux use and programming
    use vi shortcuts in terminal.txt
    openvpn.txt
    poor man rsync.rst
-   
+   curl.rst
